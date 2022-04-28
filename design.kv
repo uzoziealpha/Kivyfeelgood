@@ -1,0 +1,47 @@
+<LoginScreen>:
+    GridLayout:
+        cols: 1
+        GridLayout:
+            cols: 1
+            Label:
+                text: "User Login"
+            TextInput:
+                hint_text: "Username"
+            TextInput:
+                hint_text: "Password"
+            Button:
+                text: "Login"
+        GridLayout:
+            cols: 2
+            Button:
+                text: "forgot Password"
+            Button:
+                text: "Sign Up"
+                #on press allows the user to hit the root.signup function
+                # root.sign up = Login screen in main.py
+                on_press: root.sign_up()
+ 
+
+#we create a sign up screen
+#this will be readble, writeable
+<SignUpScreen>:
+    GridLayout:
+        cols: 1
+        Label:
+            text:'Sign up for a glimpse'
+        TextInput:
+            hint_text: "Username"
+        TextInput:
+            hint_text: "Password"
+        Button:
+            text:'Submit'
+
+   
+
+#allows the functions to work 
+<RootWidget>:
+    LoginScreen:
+        name: "login_screen"
+    SignUpScreen:
+        name: "sign_up_screen"
+    
